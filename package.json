@@ -1,0 +1,36 @@
+{
+  "name": "skyz-hypno",
+  "version": "0.1.0",
+  "private": true,
+  "description": "SkyzHypno (SH) - a modern audiovisual hypnosis and suggestion addon for Bondage Club.",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf dist coverage",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --coverage.enabled=false",
+    "build": "vite build && node scripts/build-userscript.mjs",
+    "check": "npm run typecheck && npm run test && npm run build",
+    "package": "npm run check && node scripts/package.mjs"
+  },
+  "dependencies": {
+    "bondage-club-mod-sdk": "1.2.0",
+    "lz-string": "1.5.0",
+    "zod": "3.25.67"
+  },
+  "devDependencies": {
+    "@types/node": "24.0.10",
+    "jsdom": "26.1.0",
+    "typescript": "5.8.3",
+    "vite": "^7.3.6",
+    "vitest": "^3.2.7"
+  },
+  "homepage": "https://github.com/mystiq-skyz/skyzhypno",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mystiq-skyz/skyzhypno.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mystiq-skyz/skyzhypno/issues"
+  }
+}
